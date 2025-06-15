@@ -1,0 +1,12 @@
+
+public class Employeemaiin 
+{
+
+	public static void main(String[] args) 
+	{
+	Employeeinfo einfo = new Employeeinfo();
+	Employee empobj[]= einfo.accept();
+	einfo.Display(empobj);
+	}
+
+}
