@@ -1,0 +1,56 @@
+import java.util.Scanner;
+public class Employeeinfo 
+{
+public static Employee[] accept()
+{
+	Scanner Sc =new Scanner(System.in);
+	System.out.print("how many employee details do you want to strore");
+	int n=Sc.nextInt();
+	
+	Employee emparr[]=new Employee[n];
+	
+	for(int i=0;i<emparr.length;i++) 
+ {		
+	System.out.print("Enter employee Id");
+	int empId=Sc.nextInt();
+	System.out.print("Enter employee name");
+	String empName=Sc.next();
+	System.out.print("Enter employee salary");
+	double empSalary=Sc.nextDouble();
+	
+	Employee empobj = new Employee(empId, empName, empSalary);
+	emparr[i]=empobj;
+}
+	return emparr;
+}
+	
+public static void Display(Employee emparr[]) 
+{
+	
+	for (Employee empobj:emparr) {
+	System.out.print("\t\tEmployee ID:\t\t" +empobj.getEmpId());
+	System.out.print("\t\tEmployee NAME:\t\t" +empobj.getEmpName());
+	System.out.print("\t\tEmployee SALARY:\t\t" +empobj.getEmpSalary());
+	
+}
+}
+/*public void searchEmployee(Employee emparr[],int empid) 
+{	
+	Boolean b=false;
+	for (Employee empobj:emparr) {
+		if(empobj.getEmpId()==empid)
+			b=true;
+		System.out.print("\t\tEmployee ID:\t\t" +empobj.getEmpId());
+		System.out.print("\t\tEmployee NAME:\t\t" +empobj.getEmpName());
+		System.out.print("\t\tEmployee SALARY:\t\t" +empobj.getEmpSalary());
+		break;
+		
+		
+		
+}
+}
+if(b==false)
+{
+	System.out.print("employee not found");
+}*/
+}
